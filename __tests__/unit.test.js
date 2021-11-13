@@ -45,8 +45,8 @@ test("mixed characters", () => {
 });
 
 // Date tests
-test("empty", () => {
-  expect(functions.isDate("")).toBe(false);
+test("one digit for all spaces", () => {
+  expect(functions.isDate("1/1/1")).toBe(false);
 });
 test("3 digits in some 2 digit space", () => {
   expect(functions.isDate("333/3/2020")).toBe(false);
